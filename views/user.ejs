@@ -23,13 +23,16 @@
     </style>
 </head>
 <body>
+
+        <a href="/tweet/<%=userId%>">TWEET</a>
         <% dataTweet.forEach(el => { %>
             <div class="sched">
                     <h2><%= el.User.UserName %></h2>
                     <h3><%= el.Post %></h3>
                     <p><%= el.createdAt %></p>
-                    <p><a href="/user/<%= el.id %>">delete</a></p> 
-                    <p><a href="/user/edit/<%= el.id %>">edit</a></p>                 
+                    <p><a href="/user/<%=userId%>/delete/<%= el.id %>">delete</a></p>    
+                    <p><a href="/user/<%=userId%>/edit/<%= el.id %>">edit</a></p>                 
+
             </div>
          <% }) %>
         </body>
