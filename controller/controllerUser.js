@@ -51,7 +51,12 @@ class ControllerUser {
           console.log(data.dataValues.Password)
           let value = bcrypt.compareSync(req.body.Password, data.dataValues.Password)
 
-          if (value === true) {
+          if (value) {
+            req.session.user = {
+              id: data.dataValues.id,
+              name: data.dataValues.UserName
+            }
+         
             res.redirect(`user/${data.dataValues.id}`)
           } else {
             res.render('home', {
