@@ -5,6 +5,7 @@ const Hashtag = require('../helpers/hashtag')
 class Controller{
     static getHome(req,res){
         console.log(req.params.userId)
+
         Model.Tweet.findAll({
             include : [Model.User],
             order: [
@@ -14,6 +15,7 @@ class Controller{
         .then((dataTweet)=>{
             res.render('user.ejs',{dataTweet : dataTweet,userId:req.params.userId})
         })       
+
         .catch((err)=>{
             res.send(err)
         })

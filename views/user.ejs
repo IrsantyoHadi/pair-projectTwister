@@ -23,6 +23,7 @@
     </style>
 </head>
 <body>
+
         <a href="/tweet/<%=userId%>">TWEET</a>
         <% dataTweet.forEach(el => { %>
             <div class="sched">
@@ -31,6 +32,7 @@
                     <p><%= el.createdAt %></p>
                     <p><a href="/user/<%=userId%>/delete/<%= el.id %>">delete</a></p>    
                     <p><a href="/user/<%=userId%>/edit/<%= el.id %>">edit</a></p>                 
+
             </div>
          <% }) %>
         </body>
