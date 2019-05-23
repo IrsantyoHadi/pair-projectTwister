@@ -28,7 +28,8 @@
                     <h2><%= el.User.UserName %></h2>
                     <h3><%= el.Post %></h3>
                     <p><%= el.createdAt %></p>
-                    <p><a href="/user/<%= el.id %>">delete</a></p>                  
+                    <p><a href="/user/<%= el.id %>">delete</a></p> 
+                    <p><a href="/user/edit/<%= el.id %>">edit</a></p>                 
             </div>
          <% }) %>
         </body>
