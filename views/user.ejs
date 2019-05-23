@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    .sched {
+      background-color: greenyellow;
+      color: black;
+      margin: 20px;
+      padding: 20px;
+    } 
+    .sched2 {
+      background-color: white;
+      color: black;
+      margin: 20px;
+      padding: 20px;
+    }
+    
+    </style>
+</head>
+<body>
+        <a href="/tweet/<%=userId%>">TWEET</a>
+        <% dataTweet.forEach(el => { %>
+            <div class="sched">
+                    <h2><%= el.User.UserName %></h2>
+                    <h3><%= el.Post %></h3>
+                    <p><%= el.createdAt %></p>
+                    <p><a href="/user/<%=userId%>/delete/<%= el.id %>">delete</a></p>    
+                    <p><a href="/user/<%=userId%>/edit/<%= el.id %>">edit</a></p>                 
+            </div>
+         <% }) %>
+        </body>
+        
+</html>
