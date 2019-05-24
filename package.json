@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
+<<<<<<< HEAD
+=======
+
+>>>>>>> d397dfbc65cb84b5ae59e1d43891fb362c3dfee3
   },
   "repository": {
     "type": "git",
