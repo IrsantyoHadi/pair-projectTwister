@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 
 class ControllerUser {
   static createGet(req, res) {
-    res.render('formUser', {
+    res.render('formUser.ejs', {
       title: title,
       command: 'add',
       data: null,
@@ -30,7 +30,7 @@ class ControllerUser {
       .then(() => res.redirect('/'))
       .catch((err) => {
         console.log(err)
-        res.render('forUser', {
+        res.render('formUser', {
           errData: err.message,
           title: title,
           command: 'add',
